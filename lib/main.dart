@@ -1,8 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/domain/firebase_connection.dart';
-import 'package:flutter_application_2/views/getfirebase.dart';
 import 'package:flutter_application_2/views/listview_3.dart';
 
 void main() async {
