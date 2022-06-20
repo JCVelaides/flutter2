@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/views/listview_3.dart';
+//import 'package:flutter_application_2/views/listview_3.dart';
+import 'package:flutter_application_2/views/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        home: ListView3());
+        home: Splash());
   }
 }
 
