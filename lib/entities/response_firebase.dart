@@ -1,22 +1,10 @@
-import 'package:flutter_application_2/entities/registros.dart';
+import 'package:flutter_application_2/entities/barbershop.dart';
 
 class ResponseFirebase {
-  List<Registros>? registros;
+  List<BarberShop>? barbershops;
 
-  ResponseFirebase({this.registros});
+  ResponseFirebase({this.barbershops});
 
-  /*ResponseFirebase.fromJson(Map<String, dynamic> json) {
-    if (json['registros'] != null) {
-      registros = <Registros>[];
-      json['Registros'].forEach((v) {
-        registros!.add(Registros.fromJson(v));
-      });
-    }
-  }*/
-
-  /*ResponseFirebase.fromJson(List json) {
-    registros = json.map((e) => Registros.fromJson(e)).toList();
-  }*/
   factory ResponseFirebase.fromJson(List list) => ResponseFirebase(
-      registros: list.map((e) => Registros.fromJson(e)).toList());
+      barbershops: list.map((e) => BarberShop.fromJson(e)).toList());
 }

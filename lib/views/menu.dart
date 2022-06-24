@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_2/views/listview_3.dart';
-import 'package:flutter_application_2/views/listview_5.dart';
+import 'package:flutter_application_2/views/custom_card/card_view.dart';
+import 'package:flutter_application_2/views/listview_1.dart';
+import 'package:flutter_application_2/views/listview_3.dart';
+import 'package:flutter_application_2/views/profile/list_profile.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -15,20 +17,10 @@ class _MenuS extends State<Menu> {
       TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    ListView5()
-    /*Text(
-      'Index 1: Service',
-      style: optionStyle,
-    )*/
-    ,
-    Text(
-      'Index 2: Profile',
-      style: optionStyle,
-    ),
+    ListView1(),
+    ListView3(),
+    CardView(),
+    ListProfile(),
   ];
 
   void _onItemTapped(int index) {
@@ -40,14 +32,6 @@ class _MenuS extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue[800],
-        title: const Text("Soccer"),
-      ),
-      /*body: Container(
-          alignment: Alignment.center,
-          child: const Text("Home"),
-        ));*/
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -56,21 +40,26 @@ class _MenuS extends State<Menu> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.black87,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports_soccer),
+            icon: Icon(Icons.content_cut),
             label: 'Service',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.black87,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.style),
+            label: 'Card',
+            backgroundColor: Colors.black87,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.black87,
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue[800],
+        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
     );

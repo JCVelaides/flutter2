@@ -36,7 +36,7 @@ class Home extends State<Splash> {
                 child: Lottie.asset('assets/animations/soccer_ball.json')),
             const SizedBox(height: 20),
             const Text(
-              "Soccer",
+              "BarberShop",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ],

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/entities/barbershop.dart';
-import 'package:flutter_application_2/provider/list_provider.dart';
+import 'package:flutter_application_2/provider/card_provider.dart';
 
-class DataProvider {
+class CardDataProvider {
   Widget recorrerLista(
       BuildContext context, Future<List<BarberShop>?> barbershop) {
     return FutureBuilder(
@@ -11,7 +11,7 @@ class DataProvider {
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
           return ListView(
-            children: [ListProvider.showList(snapshot.data, context)],
+            children: [CardProvider.showCard(snapshot.data, context)],
           );
         } else {
           return const Center(

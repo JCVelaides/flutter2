@@ -7,30 +7,20 @@ class ListView1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("ListView 1"),
+          backgroundColor: Colors.black87,
+          title: const Text("Heroica BarberShop"),
         ),
-        body: ListView(
-          children: const [
-            Text("Hola 1"),
-            Text("Hola 2"),
-            Text("Hola 3"),
-            ListTile(
-              leading: Icon(Icons.cloud_circle),
-              title: Text("Hola 4"),
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(
+                  'https://thumbs.dreamstime.com/b/fondo-de-la-barber%C3%ADa-modelo-incons%C3%BAtil-con-las-tijeras-peluquer%C3%ADa-brocha-afeitar-maquinilla-peine-cara-del-inconformista-y-polo-121495264.jpg'),
+              fit: BoxFit.fitHeight,
             ),
-            ListTile(
-              leading: Icon(Icons.cloud_circle),
-              title: Text("Hola 5"),
-            ),
-            ListTile(
-              leading: Icon(Icons.cloud_circle),
-              title: Text("Hola 6"),
-            ),
-            ListTile(
-              leading: Icon(Icons.cloud_circle),
-              title: Text("Hola 7"),
-            ),
-          ],
+          ),
+          child: const Center(
+            child: Text(''),
+          ),
         ));
   }
 }

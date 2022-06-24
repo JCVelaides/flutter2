@@ -15,9 +15,10 @@ class _ListView3State extends State<ListView3> {
     FirebaseConnection fireBaseConnection = FirebaseConnection();
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Fútbol Profesional Colombiano"),
+          backgroundColor: Colors.black87,
+          title: const Text("Heroica BarberShop"),
         ),
         body: DataProvider()
-            .recorrerLista(context, fireBaseConnection.getRegisters()));
+            .recorrerLista(context, fireBaseConnection.getBarberShops()));
   }
 }

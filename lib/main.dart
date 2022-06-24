@@ -1,12 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_application_2/views/listview_3.dart';
 import 'package:flutter_application_2/views/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //callDatabase();
   runApp(const MyApp());
 }
 
@@ -21,12 +19,3 @@ class MyApp extends StatelessWidget {
         home: Splash());
   }
 }
-
-/*
-void callDatabase() {
-  DatabaseReference starCountRef = FirebaseDatabase.instance.ref('/Registros');
-  starCountRef.onValue.listen((event) {
-    final data = event.snapshot.value;
-    print(data.toString());
-  });
-}*/
